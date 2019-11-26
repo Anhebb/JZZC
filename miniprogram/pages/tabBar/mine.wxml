@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="info-box">
+    <view class="avatar">
+      <image src=""></image>
+    </view>
+
+    <view class="info">
+      <label class="nickname"></label>
+      <label>欢迎来到近在咫尺！</label>
+    </view>
+  </view>
+</view>

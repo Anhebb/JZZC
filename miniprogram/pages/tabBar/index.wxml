@@ -1,0 +1,4 @@
+<!--miniprogram/pages/tabBar/index.wxml-->
+<view class="container">
+  首页
+</view>

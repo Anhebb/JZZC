@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-button": "../../../components/dist/button/index",
+    "van-tabbar": "../../../miniprogram_npm/vant-weapp/tabbar/index",
+    "van-tabbar-item":"../../../miniprogram_npm/vant-weapp/tabbar-item/index"
+  }
+}
