@@ -1,4 +1,16 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "个人中心"
+  "navigationBarTitleText": "个人中心",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tui-button": "../../components/thorUI/extend/button/button",
+    "tui-list-cell": "../../components/thorUI/list-cell/list-cell",
+    "tui-icon": "../../components/thorUI/icon/icon",
+    "tui-divider": "../../components/thorUI/divider/divider",
+    "tui-loadmore": "../../components/thorUI/loadmore/loadmore",
+    "van-icon": "../../components/vantUI/icon/index"
+  }
 }

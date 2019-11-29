@@ -1,12 +1,199 @@
-<view class="container">
-  <view class="info-box">
-    <view class="avatar">
-      <image src=""></image>
+<view>
+  <!--header-->
+  <view class="tui-header-box" style="height:{{height}}px;background:rgba(255,255,255,{{opcity}})">
+    <view class="tui-header" style="padding-top:{{top}}px;opacity:{{opcity}}">
+      我的
+    </view>
+  </view>
+  <!--header-->
+  <view class="tui-mybg-box">
+    <image src="/images/mine/img_bg_3x.png" class="tui-my-bg"></image>
+    <view class="tui-header-center">
+      <image src="/images/mine/mine_def_touxiang_3x.png" class="tui-avatar" bindtap="href" data-type="3"></image>
+      <view class="tui-info">
+        <view class="tui-nickname">
+          <text>echo.</text>
+          <image src="/images/mine/icon_vip_3x.png" class="tui-img-vip"></image>
+        </view>
+        <view class="tui-explain">这家伙很懒…</view>
+      </view>
+      <!-- <view class="tui-set-box">
+        <view class="tui-icon-box tui-icon-message" bindtap="href" data-type="1">
+          <tui-icon name="message" color="#fff" size="{{26}}"></tui-icon>
+          <view class="tui-badge tui-badge-white">1</view>
+        </view>
+        <view class="tui-icon-box tui-icon-setup" bindtap="href" data-type="2">
+          <tui-icon name="setup" color="#fff" size="{{26}}"></tui-icon>
+        </view>
+      </view> -->
+    </view>
+    <view class="tui-header-btm" bindtap="href" data-type="5">
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">25</view>
+        <view class="tui-btm-text">收藏夹</view>
+      </view>
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">22</view>
+        <view class="tui-btm-text">店铺关注</view>
+      </view>
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">3</view>
+        <view class="tui-btm-text">喜欢的内容</view>
+      </view>
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">44</view>
+        <view class="tui-btm-text">足迹</view>
+      </view>
+    </view>
+  </view>
+  <view class="tui-content-box">
+    <view class="tui-box tui-order-box">
+      <tui-list-cell arrow="{{true}}" padding="0" lineLeft="{{false}}" bind:click="href" data-type="4">
+        <view class="tui-cell-header">
+          <view class="tui-cell-title">我的订单</view>
+          <view class="tui-cell-sub">查看全部订单</view>
+        </view>
+      </tui-list-cell>
+      <view class="tui-order-list">
+        <view class="tui-order-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="/images/mine/icon_daifukuan_3x.png" class="tui-order-icon"></image>
+            <view class="tui-badge tui-badge-green">1</view>
+          </view>
+          <view class="tui-order-text">待付款</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="/images/mine/icon_daifahuo_3x.png" class="tui-order-icon"></image>
+            <view class="tui-badge tui-badge-green">1</view>
+          </view>
+          <view class="tui-order-text">待发货</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="/images/mine/icon_daishouhuo_3x.png" class="tui-order-icon"></image>
+            <view class="tui-badge tui-badge-green" v-if="false">12</view>
+          </view>
+          <view class="tui-order-text">待收货</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="/images/mine/icon_pingjia_3x.png" class="tui-order-icon"></image>
+            <view class="tui-badge tui-badge-green" v-if="false">12</view>
+          </view>
+          <view class="tui-order-text">评价</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="/images/mine/icon_tuikuan_3x.png" class="tui-order-icon"></image>
+            <view class="tui-badge tui-badge-green">2</view>
+          </view>
+          <view class="tui-order-text">退款/售后</view>
+        </view>
+      </view>
     </view>
 
-    <view class="info">
-      <label class="nickname"></label>
-      <label>欢迎来到近在咫尺！</label>
+    <view class="tui-box tui-assets-box" bindtap="href" data-type="6">
+      <tui-list-cell padding="0" last="{{true}}" hover="{{false}}">
+        <view class="tui-cell-header">
+          <view class="tui-cell-title">我的资产</view>
+        </view>
+      </tui-list-cell>
+      <view class="tui-order-list tui-assets-list">
+        <view class="tui-order-item">
+          <view class="tui-assets-num">
+            <text>3</text>
+            <view class="tui-badge-dot"></view>
+          </view>
+          <view class="tui-assets-text">优惠券</view>
+        </view>
+        <view class="tui-order-item">
+          <view class="tui-assets-num">
+            <text>7</text>
+            <view class="tui-badge-dot"></view>
+          </view>
+          <view class="tui-assets-text">积分</view>
+        </view>
+        <view class="tui-order-item">
+          <view class="tui-assets-num">
+            <text>0</text>
+          </view>
+          <view class="tui-assets-text">红包</view>
+        </view>
+        <view class="tui-order-item">
+          <view class="tui-assets-num">
+            <text>1</text>
+          </view>
+          <view class="tui-assets-text">礼品卡</view>
+        </view>
+        <view class="tui-order-item">
+          <view class="tui-assets-num">
+            <text>20</text>
+          </view>
+          <view class="tui-assets-text">津贴</view>
+        </view>
+      </view>
     </view>
+
+    <view class="tui-box tui-tool-box" bindtap="href" data-type="7">
+      <tui-list-cell arrow="{{true}}" padding="0" lineLeft="{{false}}">
+        <view class="tui-cell-header">
+          <view class="tui-cell-title">常用工具</view>
+          <view class="tui-cell-sub">查看更多</view>
+        </view>
+      </tui-list-cell>
+      <view class="tui-order-list tui-flex-wrap">
+        <view class="tui-tool-item">
+          <view class="tui-icon-box">
+             <tui-icon name="home" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">收货地址</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="tui-icon-box">
+             <tui-icon name="wallet" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">钱包</view>
+        </view>
+        <view class=" tui-tool-item">
+          <view class="tui-icon-box">
+            <tui-icon name="redpacket" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">领券中心</view>
+        </view>
+        <view class=" tui-tool-item">
+          <view class="tui-icon-box">
+            <tui-icon name="kefu" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">客服服务</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="tui-icon-box">
+             <tui-icon name="wifi" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">附近菜友</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="tui-icon-box">
+             <tui-icon name="explain" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">帮助说明</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="tui-icon-box">
+             <tui-icon name="send" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">意见反馈</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="tui-icon-box">
+            <tui-icon name="edit" color="#39b54a" size="{{32}}"></tui-icon>
+          </view>
+          <view class="tui-tool-text">开发票</view>
+        </view>
+      </view>
+    </view>
+    <!--加载loadding-->
+    <tui-loadmore visible="{{loadding}}" index="{{3}}" type="red"></tui-loadmore>
   </view>
 </view>

@@ -1,3 +1,15 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "购物车",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "tui-swipe-action": "../../components/thorUI/swipe-action/swipe-action",
+    "tui-button": "../../components/thorUI/extend/button/button",
+    "tui-numberbox": "../../components/thorUI/numberbox/numberbox",
+    "tui-icon": "../../components/thorUI/icon/icon",
+    "tui-divider": "../../components/thorUI/divider/divider",
+    "tui-loadmore": "../../components/thorUI/loadmore/loadmore"
+  }
 }

@@ -1,5 +1,6 @@
 {
   "pages": [
+        "pages/tabBar/shoppingCar",
         "pages/tabBar/mine",
         "pages/index/index",
     "pages/mine/testButton/test",
@@ -15,8 +16,6 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room",
-
-    "pages/tabBar/shoppingCar",
     "pages/tabBar/index",
     "pages/tabBar/search"
   ],
