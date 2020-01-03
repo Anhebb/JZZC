@@ -65,7 +65,7 @@
 	}
 
 	.tui-badge-red {
-		background: #F74D54;
+		background: #f43f3b;
 		color: #fff;
 	}
   .tui-badge-green {

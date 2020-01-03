@@ -1,66 +1,71 @@
-// miniprogram/pages/tabBar/index.js
+const app = getApp()
+const db = wx.cloud.database()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    category: [{
+      img: "/images/index/shuiguo.png",
+      name: "时令水果"
+    }, {
+      img: "/images/index/Vegetables-.png",
+      name: "新鲜蔬菜"
+    }, {
+      img: "/images/index/shushi.png",
+      name: "肉蛋熟食"
+    }, {
+      img: "/images/index/haixian.png",
+      name: "海鲜水产"
+    }, {
+      img: "/images/index/niunai.png",
+      name: "安心乳品"
+    }, {
+      img: "/images/index/jiushuiyinliao.png",
+      name: "酒水饮料"
+    }, {
+      img: "/images/index/liangyou.png",
+      name: "粮油速食"
+    }, {
+      img: "/images/index/sudong.png",
+      name: "速冻食品"
+    }],
+    current:0,
+    cardCur:0,//轮播banner下标
+    hotSearch: [],
+    banner:[],
+    hotProduct: [],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function () {
+  
+   },
+   onShow:function(){
+     this.getData()
+   },
+   change: function (e) {
+    this.setData({
+      current: e.detail.current
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+     // cardSwiper
+  cardSwiper(e) {
+    this.setData({
+      cardCur: e.detail.current
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 获取数据 
+  getData:function(){
+    var that=this
+    db.collection('index').get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log(res.data)
+        let data=res.data
+        that.setData({
+          banner:data[0].banner,
+          hotProduct:data[0].hotProduct,
+          hotSearch:data[0].hotSearch,
+        })
+      }
+    })
   }
+  
+  
 })

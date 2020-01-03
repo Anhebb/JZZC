@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "tui-icon": "../../components/thorUI/icon/icon"
+  },
+  "navigationBarTitleText": "近在咫尺"
 }

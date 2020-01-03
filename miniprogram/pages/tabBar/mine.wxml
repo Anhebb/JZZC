@@ -58,35 +58,35 @@
         <view class="tui-order-item" bindtap="href" data-type="4">
           <view class="tui-icon-box">
             <image src="/images/mine/icon_daifukuan_3x.png" class="tui-order-icon"></image>
-            <view class="tui-badge tui-badge-green">1</view>
+            <view class="tui-badge tui-badge-red">1</view>
           </view>
           <view class="tui-order-text">待付款</view>
         </view>
         <view class="tui-order-item" bindtap="href" data-type="4">
           <view class="tui-icon-box">
             <image src="/images/mine/icon_daifahuo_3x.png" class="tui-order-icon"></image>
-            <view class="tui-badge tui-badge-green">1</view>
+            <view class="tui-badge tui-badge-red">1</view>
           </view>
           <view class="tui-order-text">待发货</view>
         </view>
         <view class="tui-order-item" bindtap="href" data-type="4">
           <view class="tui-icon-box">
             <image src="/images/mine/icon_daishouhuo_3x.png" class="tui-order-icon"></image>
-            <view class="tui-badge tui-badge-green" v-if="false">12</view>
+            <view class="tui-badge tui-badge-red" v-if="false">12</view>
           </view>
           <view class="tui-order-text">待收货</view>
         </view>
         <view class="tui-order-item" bindtap="href" data-type="4">
           <view class="tui-icon-box">
             <image src="/images/mine/icon_pingjia_3x.png" class="tui-order-icon"></image>
-            <view class="tui-badge tui-badge-green" v-if="false">12</view>
+            <view class="tui-badge tui-badge-red" v-if="false">12</view>
           </view>
           <view class="tui-order-text">评价</view>
         </view>
         <view class="tui-order-item" bindtap="href" data-type="4">
           <view class="tui-icon-box">
             <image src="/images/mine/icon_tuikuan_3x.png" class="tui-order-icon"></image>
-            <view class="tui-badge tui-badge-green">2</view>
+            <view class="tui-badge tui-badge-red">2</view>
           </view>
           <view class="tui-order-text">退款/售后</view>
         </view>
@@ -145,49 +145,49 @@
       <view class="tui-order-list tui-flex-wrap">
         <view class="tui-tool-item">
           <view class="tui-icon-box">
-             <tui-icon name="home" color="#39b54a" size="{{32}}"></tui-icon>
+             <tui-icon name="home" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">收货地址</view>
         </view>
         <view class="tui-tool-item">
           <view class="tui-icon-box">
-             <tui-icon name="wallet" color="#39b54a" size="{{32}}"></tui-icon>
+             <tui-icon name="wallet" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">钱包</view>
         </view>
         <view class=" tui-tool-item">
           <view class="tui-icon-box">
-            <tui-icon name="redpacket" color="#39b54a" size="{{32}}"></tui-icon>
+            <tui-icon name="redpacket" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">领券中心</view>
         </view>
         <view class=" tui-tool-item">
           <view class="tui-icon-box">
-            <tui-icon name="kefu" color="#39b54a" size="{{32}}"></tui-icon>
+            <tui-icon name="kefu" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">客服服务</view>
         </view>
         <view class="tui-tool-item">
           <view class="tui-icon-box">
-             <tui-icon name="wifi" color="#39b54a" size="{{32}}"></tui-icon>
+             <tui-icon name="wifi" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">附近菜友</view>
         </view>
         <view class="tui-tool-item">
           <view class="tui-icon-box">
-             <tui-icon name="explain" color="#39b54a" size="{{32}}"></tui-icon>
+             <tui-icon name="explain" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">帮助说明</view>
         </view>
         <view class="tui-tool-item">
           <view class="tui-icon-box">
-             <tui-icon name="send" color="#39b54a" size="{{32}}"></tui-icon>
+             <tui-icon name="send" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">意见反馈</view>
         </view>
         <view class="tui-tool-item">
           <view class="tui-icon-box">
-            <tui-icon name="edit" color="#39b54a" size="{{32}}"></tui-icon>
+            <tui-icon name="edit" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">开发票</view>
         </view>

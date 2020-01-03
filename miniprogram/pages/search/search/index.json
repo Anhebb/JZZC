@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "搜索",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#fff",
+  "backgroundColorBottom": "#fff",
+  "usingComponents": {
+    "tui-icon": "/components/thorUI/icon/icon",
+    "tui-tag": "/components/thorUI/tag/tag",
+    "tui-actionsheet": "/components/thorUI/actionsheet/actionsheet"
+  }
+}

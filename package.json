@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "miniprogram-sm-crypto": "^0.1.0",
-    "vant-weapp": "^0.5.23"
+    "vant-weapp": "^0.5.23",
+    "wx-server-sdk": "^1.7.0"
   },
   "devDependencies": {},
   "scripts": {

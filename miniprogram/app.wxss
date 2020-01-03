@@ -154,3 +154,46 @@ page {
   line-height: 36rpx;
   word-break: break-all;
 }
+
+page, view, image, text, button, input, textarea, swiper, swiper-item,
+scroll-view, navigator, form, label, picker, video, audio, map, canvas {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+page {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  color: #333;
+  font-size: 28rpx;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'PingFang SC', Helvetica, Tohoma, Arial, sans-serif;
+}
+/* 清除botton默认样式 */
+/* 清空默认button 样式  */
+button{
+    position: relative;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    line-height: 100rpx;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+button::after,
+button::before{
+    content: '';
+   border: none;
+}
+.item-container {
+  width: 750rpx;
+  box-sizing: border-box;
+}
