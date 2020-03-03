@@ -1,0 +1,103 @@
+<view class="item-container">
+	<!-- 顶部轮播图 -->
+	<view class="detail-top-banner">
+		<swiper autoplay="true" interval="5000" duration="150" indicator-dots="true" class="top-banner-swiper">
+			<block wx:for="{{4}}" wx:key="index">
+				<swiper-item>
+					<image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/index/banner/img1.jpg" mode="aspectFill" class="top-banner-image"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 商品详情 -->
+	<view class="product-detail">
+		<view class="product-detail-title">
+			<view class="detail-title-top">
+				<view class="product-detail-price">
+					价格：<label>￥100.00</label>
+				</view>
+				<view class="like">
+					<c-icon name="like-fill" color="red"></c-icon>
+					<label>喜欢</label>
+				</view>
+			</view>
+		</view>
+		<view class="detail-title-middle">
+			<view class="product-introduct-text">
+				谈判官明星同款耳坠韩国气质简约显脸瘦的耳环女百搭个性长款耳钉 个性水滴耳环【A2】
+			</view>
+			<view class="share">
+				<c-icon name="share"></c-icon>分享
+			</view>
+		</view>
+    <view class="detail-title-bottom">
+      <label>快递：0.00</label>
+      <label>销量：2000</label>
+      <label>库存：1090</label>
+    </view>
+	</view>
+
+	<view class="tui-basic-info tui-mtop tui-radius-all">
+      <view class="tui-list-cell" bindtap="showPopup" >
+        <view class="tui-bold tui-cell-title">已选</view>
+        <view class="tui-selected-box">个性水滴耳环【A2】,1个，可选服务</view>
+        <c-icon name="more-fill" size="20" class="tui-right" color="#666"></c-icon>
+      </view>
+      <view class="tui-list-cell" bindtap="showPopup">
+        <view class="tui-bold tui-cell-title">送至</view>
+        <view class="tui-addr-box">
+          <view class="tui-addr-item">北京朝阳区三环到四环之间</view>
+          <view class="tui-addr-item">今日23:59前完成下单，预计6月28日23:30前发货，7月1日24:00前送达</view>
+        </view>
+        <c-icon name="more-fill" size="20" class="tui-right" color="#666"></c-icon>
+      </view>
+      <view class="tui-list-cell tui-last">
+        <view class="tui-bold tui-cell-title">运费</view>
+        <view class="tui-selected-box">在线支付免运费</view>
+      </view>
+    </view>
+
+
+  <view class="fixed-box">
+    <view class="fixed-item">
+    <c-icon name="kefu"></c-icon>
+    <label>客服</label>
+    </view>
+    <view class="fixed-item">
+    <c-icon name="shop"></c-icon>
+    <label>购物车</label>
+    </view>
+    <view class="add-shoppingCar">加入购物车</view>
+    <view class="buy">立即购买</view>
+  </view>
+  
+</view>
+
+<!--底部选择层-->
+  <tui-bottom-popup show="{{popupShow}}" tui-popup-class="tui-popup" bind:close="hidePopup">
+    <view class="tui-popup-box">
+      <view class="tui-product-box tui-padding">
+        <image src="https://www.thorui.cn/img/product/11.jpg" class="tui-popup-img"></image>
+        <view class="tui-popup-price">
+          <view class="tui-amount tui-bold">￥49.00</view>
+          <view class="tui-number">编号:4373299399393</view>
+        </view>
+      </view>
+      <scroll-view scroll-y class="tui-popup-scroll">
+        <view class="tui-scrollview-box">
+        
+
+          <view class="tui-number-box tui-bold tui-attr-title">
+            <view class="tui-attr-title">数量</view>
+            <tui-numberbox max="99" min="1" value="{{value}}" bind:change="change"></tui-numberbox>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="tui-operation tui-operation-right tui-right-flex tui-popup-btn">
+        <tui-button type="red" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bind:click="hidePopup">加入购物车</tui-button>
+        <tui-button type="warning" tui-button-class="tui-btn-equals" shape="circle" size="mini" class="tui-flex-1" bind:click="submit">立即购买</tui-button>
+      </view>
+
+      <tui-icon name="close-fill" color="#999" class="tui-icon-close" size="20" bindtap="hidePopup"></tui-icon>
+    </view>
+  </tui-bottom-popup>

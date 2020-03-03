@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "提交订单",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "tui-list-cell": "/components/thorUI/list-cell/list-cell",
+    "tui-button": "/components/thorUI/extend/button/button",
+    "tui-bottom-popup": "/components/thorUI/bottom-popup/bottom-popup"
+  }
+}

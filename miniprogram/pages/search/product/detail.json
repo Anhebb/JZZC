@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "c-icon":"/components/thorUI/icon/icon",
+    "tui-bottom-popup": "/components/thorUI/bottom-popup/bottom-popup",
+    "tui-numberbox": "/components/thorUI/numberbox/numberbox",
+    "tui-button": "/components/thorUI/button/button"
+  }
+}

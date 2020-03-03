@@ -27,6 +27,7 @@ Page({
       img: "/images/index/sudong.png",
       name: "速冻食品"
     }],
+    animation:false,//轮播告示
     current:0,
     cardCur:0,//轮播banner下标
     hotSearch: [],
@@ -34,7 +35,12 @@ Page({
     hotProduct: [],
   },
   onLoad: function () {
-  
+    // 启动轮播
+    setTimeout(()=>{
+      this.setData({
+        animation:true
+      })
+    },600)
    },
    onShow:function(){
      this.getData()

@@ -103,7 +103,7 @@ Page({
         url = "../set/set"
         break;
       case 3:
-        url = "../userInfo/userInfo"
+        url = "../mine/userInfo/index"
         break;
       case 4:
         url = "../myOrder/myOrder"

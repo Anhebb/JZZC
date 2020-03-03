@@ -16,6 +16,14 @@
 		</navigator>
 	</view>
 	<!-- 轮播广告 -->
+	<view class='tui-notice-board'>
+    <view class="tui-icon-bg">
+      <tui-icon tui-icon-class="tui-rolling-icon" name-="news-fill" size='24' color='#f54f46'></tui-icon>
+    </view>
+    <view class="tui-scorll-view" bindtap='detail'>
+      <view class="tui-notice {{animation?'tui-animation':''}}">近在咫尺的市场，近在咫尺的新鲜，让你的生活如此多姿！</view>
+    </view>
+  </view>
 	<!--banner-->
 	<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
 		<swiper-item wx:for="{{banner}}" wx:key class="{{cardCur==index?'cur':''}}">

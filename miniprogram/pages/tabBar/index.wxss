@@ -70,6 +70,64 @@
 
 /* 顶部搜索 */
 
+/* 轮播告示栏 */
+.tui-notice-board {
+  width: 100%;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  height: 60rpx;
+  background: #fff8d5;
+  display: flex;
+  align-items: center;
+}
+
+.tui-icon-bg {
+  background: #fff8d5;
+  padding-left: 30rpx;
+  position: relative;
+  z-index: 10;
+}
+
+.tui-rolling-icon {
+  margin-right: 12rpx;
+}
+
+.tui-scorll-view {
+  flex: 1;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #f54f46;
+}
+.tui-notice{
+   transform: translateX(100%);
+}
+.tui-animation {
+  -webkit-animation: tui-rolling 12s linear infinite;
+  animation: tui-rolling 12s linear infinite;
+}
+
+@-webkit-keyframes tui-rolling {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-170%);
+  }
+}
+
+@keyframes tui-rolling {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-170%);
+  }
+}
+
 /* banner */
 
 .card-swiper {
@@ -80,7 +138,7 @@
   width: 610rpx !important;
   left: 70rpx;
   box-sizing: border-box;
-  padding: 40rpx 0rpx 70rpx;
+  padding: -1rpx 0rpx 70rpx;
   overflow: initial;
 }
 

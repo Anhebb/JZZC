@@ -27,7 +27,7 @@
         </view>
       </view> -->
     </view>
-    <view class="tui-header-btm" bindtap="href" data-type="5">
+    <!-- <view class="tui-header-btm" bindtap="href" data-type="5">
       <view class="tui-btm-item">
         <view class="tui-btm-num">25</view>
         <view class="tui-btm-text">收藏夹</view>
@@ -44,7 +44,7 @@
         <view class="tui-btm-num">44</view>
         <view class="tui-btm-text">足迹</view>
       </view>
-    </view>
+    </view> -->
   </view>
   <view class="tui-content-box">
     <view class="tui-box tui-order-box">
@@ -143,12 +143,12 @@
         </view>
       </tui-list-cell>
       <view class="tui-order-list tui-flex-wrap">
-        <view class="tui-tool-item">
+        <navigator url="../mine/address/index" class="tui-tool-item">
           <view class="tui-icon-box">
              <tui-icon name="home" color="#f43f3b" size="{{32}}"></tui-icon>
           </view>
           <view class="tui-tool-text">收货地址</view>
-        </view>
+        </navigator>
         <view class="tui-tool-item">
           <view class="tui-icon-box">
              <tui-icon name="wallet" color="#f43f3b" size="{{32}}"></tui-icon>
