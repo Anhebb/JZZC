@@ -1,0 +1,16 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#F7F7F7",
+  "backgroundColorBottom": "#F7F7F7",
+  "navigationBarTitleText": "商品列表 ",
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tui-icon": "/components/thorUI/icon/icon",
+    "tui-top-dropdown": "/components/thorUI/top-dropdown/top-dropdown",
+    "tui-drawer": "/components/thorUI/drawer/drawer",
+    "tui-loadmore": "/components/thorUI/loadmore/loadmore",
+    "tui-nomore": "/components/thorUI/nomore/nomore"
+  }
+}

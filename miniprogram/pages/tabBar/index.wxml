@@ -36,7 +36,7 @@
 	<!--header-->
 	<!-- 快捷入口 -->
 	<view class="tui-product-category">
-		<view class="tui-category-item" wx:for="{{category}}" wx:key="{{index}}" data-key="{{item.name}}" bindtap="more">
+		<view class="tui-category-item" wx:for="{{category}}" wx:key="{{index}}" data-key="{{item.name}}" bindtap="herf" data-index="{{index}}">
 			<image src="{{item.img}}" class="tui-category-img" mode="scaleToFill"></image>
 			<view class="tui-category-name">{{item.name}}</view>
 		</view>

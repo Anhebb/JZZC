@@ -17,13 +17,13 @@
       <view class="page-view" hidden="{{currentTab!==index}}">
         <swiper indicator-dots autoplay circular interval="5000" duration="150" class="swiper">
           <swiper-item wx:if="{{index%2===0}}" catchtap="detail">
-            <image src="../../static/images/mall/banner/2.jpg" class="slide-image" />
+            <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/5.jpg" class="slide-image" />
           </swiper-item>
           <swiper-item catchtap="detail">
-            <image src="../../static/images/mall/banner/4.jpg" class="slide-image" />
+            <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/5.jpg" class="slide-image" />
           </swiper-item>
           <swiper-item catchtap="detail">
-            <image src="../../static/images/mall/banner/5.jpg" class="slide-image" />
+            <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/5.jpg" class="slide-image" />
           </swiper-item>
         </swiper>
         <view class="class-box">
@@ -31,19 +31,19 @@
             <view class="class-name">{{item}}</view>
             <view class="g-container">
               <view class="g-box" catchtap="productList" data-key="高价回收">
-                <image src="../../static/images/product/11.jpg" class="g-image" />
+                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">高价回收</view>
               </view>
               <view class="g-box" catchtap="productList" data-key="好物优选">
-                <image src="../../static/images/product/22.jpg" class="g-image" />
+                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">好物优选</view>
               </view>
               <view class="g-box" catchtap="productList" data-key="iphone X">
-                <image src="../../static/images/product/33.jpg" class="g-image" />
+                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">iphone X</view>
               </view>
               <view class="g-box" catchtap="productList" data-key="电动牙刷" wx:if="{{index%2===0}}">
-                <image src="../../static/images/product/44.jpg" class="g-image" />
+                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">电动牙刷</view>
               </view>
             </view>
@@ -53,15 +53,15 @@
             <view class="class-name">专场推荐{{index+1}}</view>
             <view class="g-container">
               <view class="g-box" catchtap="productList" data-key="笔记本" wx:if="{{index%2===0}}">
-                <image src="../../static/images/product/11.jpg" class="g-image" />
+                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">笔记本</view>
               </view>
               <view class="g-box" catchtap="productList" data-key="电水壶">
-                <image src="../../static/images/product/22.jpg" class="g-image" />
+                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">电水壶</view>
               </view>
               <view class="g-box" catchtap="productList" data-key="iphone X">
-                <image src="../../static/images/product/33.jpg" class="g-image" />
+                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">iphone X</view>
               </view>
               <view class="g-box" catchtap="productList" data-key="电动牙刷">

@@ -48,13 +48,13 @@ Page({
   },
   detail(e) {
     wx.navigateTo({
-      url: '../extend-view/productDetail/productDetail'
+      url: '../search/product/detail'
     })
   },
   productList(e) {
     let key = e.currentTarget.dataset.key;
     wx.navigateTo({
-      url: '../extend-view/productList/productList?searchKey=' + key
+      url: '../search/productList/index?searchKey=' + key
     })
   },
   search: function () {

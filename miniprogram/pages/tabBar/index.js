@@ -50,6 +50,20 @@ Page({
       current: e.detail.current
     })
   },
+  // 跳转
+  herf:function(e){
+    console.log(e)
+    let id =e.currentTarget.dataset.index
+    let key = e.currentTarget.dataset.key || "";
+    wx.navigateTo({
+      url: '../search/productList/index?id='+id+'&searchKey='+key,
+    })
+  },
+  detail: function() {
+    wx.navigateTo({
+      url: '../search/product/detail'
+    })
+  },
      // cardSwiper
   cardSwiper(e) {
     this.setData({

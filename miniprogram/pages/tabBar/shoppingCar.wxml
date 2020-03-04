@@ -19,7 +19,7 @@
           <label class="tui-checkbox">
             <checkbox color="#fff"></checkbox>
           </label>
-          <image src="/images/shoppingCar/{{index%2==0?'1.jpg':'4.jpg'}}" class="tui-goods-img" />
+          <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="tui-goods-img" />
           <view class="tui-goods-info">
             <view class="tui-goods-title">
               {{index%2==0?"欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜":"百雀羚套装女补水保湿护肤品"}}
@@ -53,7 +53,7 @@
           <view class="tui-checkbox tui-invalid-pr">
             <view class="tui-invalid-text">失效</view>
           </view>
-          <image src="/images/shoppingCar/4.jpg" class="tui-goods-img opcity" />
+          <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="tui-goods-img opcity" />
           <view class="tui-goods-info">
             <view class="tui-goods-title tui-gray">
               欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜

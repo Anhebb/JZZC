@@ -11,7 +11,8 @@
     "pages/shoppingCar/paySuccess/index",
     "pages/mine/address/index",
     "pages/mine/address/editAdress/index",
-    "pages/mine/userInfo/index"
+    "pages/mine/userInfo/index",
+    "pages/search/productList/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
