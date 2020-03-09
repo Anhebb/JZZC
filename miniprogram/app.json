@@ -1,10 +1,13 @@
 {
   "pages": [
+    "pages/tabBar/mine",
+    "pages/register/index",
+
+    "pages/login/index",
     "pages/tabBar/index",
     "pages/shoppingCar/submitOrder/index",
     "pages/search/product/detail",
     "pages/tabBar/shoppingCar",
-    "pages/tabBar/mine",
     "pages/tabBar/search",
     "pages/search/search/index",
     "pages/index/lucky/index",

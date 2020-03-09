@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="v-userinfo_body">
+    <image class="v-userinfo_logo" src="/images/logo.png" />
+    <view class="v-userinfo_content">
+      <view>请允许我们获取您的公开信息</view>
+      <view class="v-userinfo_text">我们需要记录您的头像和昵称</view>
+    </view>
+    <button class="v-userinfo_btn" open-type="getUserInfo" bindgetuserinfo="handleAuthLogin">唤醒微信授权</button>
+  </view>
+</view>

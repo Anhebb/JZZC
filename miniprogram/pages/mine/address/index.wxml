@@ -1,17 +1,16 @@
 <view class="tui-safe-area">
 		<view class="tui-address">
-			<block wx:for="{{3}}" wx:key="{{index}}">
+			<block wx:for="{{addressList}}" wx:key="{{index}}" wx:for-item="item">
 				<tui-list-cell padding="0">
 					<view class="tui-address-flex">
 						<view class="tui-address-left">
 							<view class="tui-address-main">
-								<view class="tui-address-name tui-ellipsis">{{["echo.","王大大","大长腿"][index]}}</view>
-								<view class="tui-address-tel">138****7708</view>
+								<view class="tui-address-name tui-ellipsis">{{item.name}}</view>
+								<view class="tui-address-tel">{{item.phone}}</view>
 							</view>
 							<view class="tui-address-detail">
-								<view class="tui-address-label" wx:if="{{index===0}}">默认</view>
-								<view class="tui-address-label" wx:if="{{index!=2}}">{{["公司","住宅","其它"][index]}}</view>
-								<text>广东省深圳市南山区高新科技园中区一路</text>
+								<view class="tui-address-label" wx:if="{{item.default}}">默认</view>
+								<text>{{item.address}}</text>
 							</view>
 						</view>
 						<view class="tui-address-imgbox">

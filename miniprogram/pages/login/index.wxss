@@ -1,0 +1,33 @@
+.v-userinfo_body {
+  background: #fff;
+  padding: 130rpx 40rpx 0;
+}
+
+.v-userinfo_logo {
+  margin: 0 auto;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+.v-userinfo_content {
+  font-size: 32rpx;
+  color: #222;
+  text-align: center;
+  padding: 80rpx 0;
+}
+
+.v-userinfo_text {
+  font-size: 28rpx;
+  color: #777;
+  margin-top: 4rpx;
+}
+
+.v-userinfo_btn {
+  background: #51acec;
+  color: #fff;
+  border-radius: 4rpx;
+  font-size: 32rpx;
+  width: 85%;
+  margin: 0 auto;
+}

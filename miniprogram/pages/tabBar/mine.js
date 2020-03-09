@@ -1,3 +1,5 @@
+const db = wx.cloud.database()
+const app = getApp()
 Page({
   data: {
     height: 64, //header高度
@@ -78,7 +80,9 @@ Page({
     ],
     pageIndex: 1,
     loadding: false,
-    pullUpOn: true
+    pullUpOn: true,
+    login:false,
+    userInfo:''
   },
   onLoad: function (options) {
     let obj = wx.getMenuButtonBoundingClientRect();
@@ -92,6 +96,15 @@ Page({
         })
       }
     })
+  },
+  onShow:function(){
+    var userInfo=wx.getStorageSync('userInfo')
+    if(userInfo){
+      this.setData({
+        userInfo,
+        login:true
+      })
+    }
   },
   href(e) {
     let page = Number(e.currentTarget.dataset.type)
@@ -165,5 +178,20 @@ Page({
         productList: this.data.productList.concat(loadData)
       })
     }
+  },
+
+  // 获取数据 
+  getData:function(){
+    var that=this
+    db.collection('userInfo').get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log(res.data)
+        let data=res.data[0]
+        that.setData({
+          userInfo:data.userInfo,
+        })
+      }
+    })
   }
 })

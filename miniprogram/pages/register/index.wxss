@@ -1,0 +1,26 @@
+@import '../mine/userInfo/index.wxss';
+.container {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding-bottom: 20rpx;
+color: #333;
+}
+.tui-list-input {
+  text-align:right ;
+}
+.comfire-btn {
+  width: 750rpx;
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips {
+  width: 550rpx;
+  margin: 0 auto;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50rpx;
+}

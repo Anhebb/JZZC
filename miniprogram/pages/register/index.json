@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tui-list-cell": "/components/thorUI/list-cell/list-cell",
+    "tui-button": "/components/thorUI/button/button"
+  },
+  "navigationBarTitleText": "注册"
+}

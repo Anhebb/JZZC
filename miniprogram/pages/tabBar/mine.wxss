@@ -118,6 +118,7 @@
 		width: 128rpx;
 		height: 128rpx;
 		display: block;
+		border-radius: 50%;
 	}
 
 	.tui-info {
@@ -404,4 +405,35 @@
 		padding-top: 10rpx;
 		font-size: 24rpx;
 		color: #656565;
+	}
+	.login-box {
+		width:750rpx;
+		height: 400rpx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.login-box image {
+		width: 140rpx;
+		height: 140rpx;
+		border-radius: 50%;
+	}
+	.goLogin {
+		width: 180rpx;
+		height: 80rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1rpx solid white;
+		margin-top: 24rpx;
+		color: #fff;
+		border-radius: 12rpx;
+	}
+	.hadLogin {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}

@@ -15,6 +15,7 @@ App({
         traceUser: true,
       })
     }
+    this.getOpenId()
   },
   globalData: {},//全局变量
   setNavHeight: function () {
@@ -28,4 +29,24 @@ App({
     console.log(navBarHeight)
     this.globalData.navH=navBarHeight
   },
+
+  // 获取openid
+  getOpenId:function(){
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        this.globalData.openid = res.result.openid;
+        wx.setStorage({
+          key:"openid",
+          data:res.result.openid
+        })
+        console.log(this.globalData.openid);
+
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err);
+      }
+    })
+  }
 })

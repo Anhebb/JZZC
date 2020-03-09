@@ -20,9 +20,25 @@
   width: 100rpx;
   height: 100rpx;
   display: block;
+  border-radius: 50%;
 }
 
 .tui-content {
   font-size: 26rpx;
   color: #666;
+}
+
+/* 模态框 */
+.tui-modal-custom {
+  text-align: center;
+}
+.tui-prompt-title {
+  padding-bottom: 20rpx;
+  font-size: 34rpx;
+}
+.tui-input {
+  margin: 30rpx 40rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+  padding-bottom: 20rpx;
+  font-size: 32rpx;
 }

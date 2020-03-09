@@ -1,0 +1,43 @@
+<view class="contianer">
+  	<tui-list-cell padding="0">
+			<view class="tui-list-cell">
+				<view>头像</view>
+				<image src="{{userInfo.avatarUrl}}" class="tui-avatar"></image>
+			</view>
+		</tui-list-cell>
+		<tui-list-cell padding="0" arrow="{{false}}" hover="{{false}}" >
+			<view class="tui-list-cell tui-pr30">
+				<view>用户名</view>
+			<input placeholder="请输入用户名" class="tui-list-input" bindinput="input" data-index="1"></input>
+			</view>
+		</tui-list-cell>
+    	<tui-list-cell padding="0" arrow="{{false}}" hover="{{false}}" >
+			<view class="tui-list-cell tui-pr30">
+				<view>昵称</view>
+			<input placeholder="请输入昵称" value="{{userInfo.nickName?userInfo.nickName:''}}" class="tui-list-input" bindinput="input" data-index="2"></input>
+			</view>
+		</tui-list-cell>
+    	<tui-list-cell padding="0" arrow="{{true}}">
+			<view class="tui-list-cell">
+				<view>性别</view>
+				<view class="tui-content">
+				<picker bindchange="sexChange" value="{{index}}" range="{{sexs}}">
+    <view class="picker">
+     {{sex?sex:'请选择性别'}}
+    </view>
+  </picker>
+		</view>
+			</view>
+		</tui-list-cell>
+    	<tui-list-cell last="true" padding="0" arrow="{{false}}" hover="{{false}}" >
+			<view class="tui-list-cell tui-pr30">
+				<view>电话号码</view>
+			<input placeholder="请输入电话号码" class="tui-list-input" bindinput="input" data-index="3"></input>
+			</view>
+		</tui-list-cell>
+     <view class="tips">温馨提示：用户名、手机号一旦确定就不能修改了哦！</view>
+    <view class="comfire-btn">
+    <tui-button shape="circle" type="danger" bind:click="comfireNickName" size="small" bindtap="saveData">确认</tui-button>
+  
+    </view>
+</view>
