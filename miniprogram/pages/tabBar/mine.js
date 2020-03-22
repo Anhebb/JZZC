@@ -129,10 +129,10 @@ Page({
         url: url
       })
     } else {
-      wx.showToast({
-        title: "功能尚未完善~",
-        icon: "none"
-      })
+      // wx.showToast({
+      //   title: "功能尚未完善~",
+      //   icon: "none"
+      // })
     }
   },
   detail: function () {

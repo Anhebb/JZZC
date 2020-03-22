@@ -33,6 +33,7 @@ Page({
     hotSearch: [],
     banner:[],
     hotProduct: [],
+    productList:''
   },
   onLoad: function () {
     // 启动轮播
@@ -73,15 +74,27 @@ Page({
   // 获取数据 
   getData:function(){
     var that=this
-    db.collection('index').get({
+    const _ = db.command
+    db.collection('banner').doc('index').get({
       success: function(res) {
         // res.data 包含该记录的数据
         console.log(res.data)
         let data=res.data
         that.setData({
-          banner:data[0].banner,
-          hotProduct:data[0].hotProduct,
-          hotSearch:data[0].hotSearch,
+          banner:data.banner,
+          hotProduct:data.hotProduct,
+        })
+      }
+    });
+    db.collection('productList').where({
+      hot:true
+    }).get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log('pid少于20',res.data)
+        let data=res.data
+        that.setData({
+          productList:data,
         })
       }
     })

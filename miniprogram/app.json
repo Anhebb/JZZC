@@ -2,7 +2,6 @@
   "pages": [
     "pages/tabBar/mine",
     "pages/register/index",
-
     "pages/login/index",
     "pages/tabBar/index",
     "pages/shoppingCar/submitOrder/index",
@@ -15,7 +14,8 @@
     "pages/mine/address/index",
     "pages/mine/address/editAdress/index",
     "pages/mine/userInfo/index",
-    "pages/search/productList/index"
+    "pages/search/productList/index",
+    "pages/mine/addData/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

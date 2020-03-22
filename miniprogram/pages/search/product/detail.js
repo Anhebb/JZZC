@@ -1,4 +1,5 @@
-// miniprogram/pages/search/profuct/detail.js
+const app = getApp()
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -6,14 +7,19 @@ Page({
    */
   data: {
     popupShow: false,
-    value:0
+    number:1,
+    address:'',
+    def:''//默认地址
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.pid)
+    var pid=parseInt(options.pid)
+    this.getData(pid)
+    this.getAddress()
   },
 
   /**
@@ -77,7 +83,49 @@ Page({
   // 选择数量改变
   change: function (e) {
     this.setData({
-      value: e.detail.value
+      number: e.detail.value
     })
   },
+
+   // 获取数据 
+   getData:function(pid){
+    var that=this
+    const _ = db.command
+    db.collection('productList').where({
+      pid:pid
+    }).get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log('商品详情',res.data)
+        let data=res.data[0]
+        that.setData({
+          product:data,
+        })
+      }
+    })
+  },
+   // 获取数据 
+   getAddress:function(){
+    var that=this
+    var openid=app.globalData.openid
+    db.collection('userInfo').where({
+      _openid:openid
+    }).get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log("地址信息",res.data)
+        let data=res.data[0]
+        var def
+        data.address.forEach(element => {
+          element.default==true
+         def= element
+         
+        });
+        that.setData({
+          address:data.address,
+          def
+        })
+      }
+    })
+  }
 })

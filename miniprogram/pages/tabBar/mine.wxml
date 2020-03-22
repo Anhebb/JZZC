@@ -191,12 +191,12 @@
 					</view>
 					<view class="tui-tool-text">意见反馈</view>
 				</view>
-				<view class="tui-tool-item">
+				<navigator url="../mine/addData/index" class="tui-tool-item">
 					<view class="tui-icon-box">
 						<tui-icon name="edit" color="#f43f3b" size="{{32}}"></tui-icon>
 					</view>
-					<view class="tui-tool-text">开发票</view>
-				</view>
+					<view class="tui-tool-text">后台管理</view>
+				</navigator>
 			</view>
 		</view>
 		<!--加载loadding-->

@@ -2,9 +2,9 @@
 	<!-- 顶部轮播图 -->
 	<view class="detail-top-banner">
 		<swiper autoplay="true" interval="5000" duration="150" indicator-dots="true" class="top-banner-swiper">
-			<block wx:for="{{4}}" wx:key="index">
+			<block wx:for="{{3}}" wx:key="index">
 				<swiper-item>
-					<image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/index/banner/img1.jpg" mode="aspectFill" class="top-banner-image"></image>
+					<image src="{{product.headimg}}" mode="aspectFill" class="top-banner-image"></image>
 				</swiper-item>
 			</block>
 		</swiper>
@@ -14,40 +14,40 @@
 		<view class="product-detail-title">
 			<view class="detail-title-top">
 				<view class="product-detail-price">
-					价格：<label>￥100.00</label>
+					价格：<label>￥{{product.price}}</label>
 				</view>
-				<view class="like">
+				<view class="like" wx:if="{{product.hot}}">
 					<c-icon name="like-fill" color="red"></c-icon>
-					<label>喜欢</label>
+					<label>热推</label>
 				</view>
 			</view>
 		</view>
 		<view class="detail-title-middle">
 			<view class="product-introduct-text">
-				谈判官明星同款耳坠韩国气质简约显脸瘦的耳环女百搭个性长款耳钉 个性水滴耳环【A2】
+				{{product.introduct}}
 			</view>
 			<view class="share">
 				<c-icon name="share"></c-icon>分享
 			</view>
 		</view>
     <view class="detail-title-bottom">
-      <label>快递：0.00</label>
-      <label>销量：2000</label>
-      <label>库存：1090</label>
+      <label>推荐度：100%</label>
+      <label>销量：{{product.sales_volume}}</label>
+      <label>库存：{{product.stock}}</label>
     </view>
 	</view>
 
 	<view class="tui-basic-info tui-mtop tui-radius-all">
       <view class="tui-list-cell" bindtap="showPopup" >
         <view class="tui-bold tui-cell-title">已选</view>
-        <view class="tui-selected-box">个性水滴耳环【A2】,1个，可选服务</view>
+        <view class="tui-selected-box">您已选择了 {{number}} 份</view>
         <c-icon name="more-fill" size="20" class="tui-right" color="#666"></c-icon>
       </view>
       <view class="tui-list-cell" bindtap="showPopup">
         <view class="tui-bold tui-cell-title">送至</view>
         <view class="tui-addr-box">
-          <view class="tui-addr-item">北京朝阳区三环到四环之间</view>
-          <view class="tui-addr-item">今日23:59前完成下单，预计6月28日23:30前发货，7月1日24:00前送达</view>
+          <view class="tui-addr-item">{{def.address}}</view>
+          <view class="tui-addr-item">今日09:30前完成下单，预计今天11:00前送达，今日15:30前完成下单，预计今天17:00前送达</view>
         </view>
         <c-icon name="more-fill" size="20" class="tui-right" color="#666"></c-icon>
       </view>
@@ -89,7 +89,7 @@
 
           <view class="tui-number-box tui-bold tui-attr-title">
             <view class="tui-attr-title">数量</view>
-            <tui-numberbox max="99" min="1" value="{{value}}" bind:change="change"></tui-numberbox>
+            <tui-numberbox max="99" min="1" value="{{number}}" bind:change="change"></tui-numberbox>
           </view>
         </view>
       </scroll-view>

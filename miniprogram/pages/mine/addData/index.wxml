@@ -1,0 +1,3 @@
+<view class="container">
+  <button bindtap="chooseExcel">解析并上传Excel数据</button>
+</view>

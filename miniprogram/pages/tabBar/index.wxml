@@ -27,9 +27,9 @@
 	<!--banner-->
 	<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
 		<swiper-item wx:for="{{banner}}" wx:key class="{{cardCur==index?'cur':''}}">
-			<view class="swiper-item">
-				<image src="{{item.url}}" mode="aspectFit"></image>
-			</view>
+			<navigator url="../search/product/detail?pid={{item.pid}}"  class="swiper-item">
+				<image src="{{item.image}}" mode="aspectFit"></image>
+			</navigator>
 		</swiper-item>
 	</swiper>
 	<!--banner-->
@@ -52,20 +52,19 @@
 	<view class="tui-banner-box">
 
 		<swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="tui-banner-swiper" circular="{{true}}" previous-margin="60rpx" next-margin="60rpx" bindchange="change">
-			<swiper-item wx:for="{{3}}" wx:key="{{index}}" class="tui-banner-item">
+			<swiper-item wx:for="{{hotProduct}}" wx:key="{{index}}" class="tui-banner-item">
 				<!-- 轮播内容 -->
 				<view class="tui-product-box tui-pb-20 tui-bg-white {{current!=index?'tui-banner-scale':''}}">
 
 					<view class="tui-new-box">
-						<view class="tui-new-item {{index!=0 && index!=1 ?'tui-new-mtop':''}}" wx:for="{{hotProduct}}" wx:key="{{index}}" bindtap="detail">
+						<view class="tui-new-item {{index!=0 && index!=1 ?'tui-new-mtop':''}}" wx:for="{{item}}" wx:for-item="item2" wx:key="{{index}}" bindtap="detail">
 							<view class="tui-title-box">
-								<view class="tui-new-title">{{item.name}}</view>
+								<view class="tui-new-title">{{item2.name}}</view>
 								<view class="tui-new-price">
-									<text class="tui-new-present">￥{{item.present}}</text>
-									<text class="tui-new-original">￥{{item.original}}</text>
+									<text class="tui-new-present">￥{{item2.price}}</text>
 								</view>
 							</view>
-							<image src="{{item.image}}" class="tui-new-img"></image>
+							<image src="{{item2.image}}" class="tui-new-img"></image>
 						</view>
 					</view>
 				</view>
@@ -114,19 +113,19 @@
 	<!--模板-->
 	<template name="productItem">
 		<!--商品列表-->
-		<view class="tui-pro-item" hover-class="hover" hover-start-time="150" bindtap="detail">
-			<image src="../../../static/images/mall/product/{{item.img}}.jpg" class="tui-pro-img" mode="widthFix" />
+		<navigator class="tui-pro-item" hover-class="hover" hover-start-time="150" url="../search/product/detail?pid={{item.pid}}">
+			<image src="{{item.headimg}}" class="tui-pro-img" mode="widthFix" />
 			<view class="tui-pro-content">
 				<view class="tui-pro-tit">{{item.name}}</view>
 				<view>
 					<view class="tui-pro-price">
-						<text class="tui-sale-price">￥{{item.sale}}</text>
-						<text class="tui-factory-price">￥{{item.factory}}</text>
+						<text class="tui-sale-price">￥{{item.price}}</text>
+						<!-- <text class="tui-factory-price">￥{{item.factory}}</text> -->
 					</view>
-					<view class="tui-pro-pay">{{item.payNum}}人付款</view>
+					<view class="tui-pro-pay">{{item.sales_volume}}人付款</view>
 				</view>
 			</view>
-		</view>
+		</navigator>
 		<!--商品列表-->
 	</template>
 
