@@ -1,7 +1,10 @@
 const util = require('../../../utils/util')
+const app = getApp()
+const db = wx.cloud.database()
 Page({
   data: {
     searchKey: "", //搜索关键词
+    kind:'',
     width: 200, //header宽度
     height: 64, //header高度
     inputTop: 0, //搜索框距离顶部距离
@@ -269,12 +272,14 @@ Page({
   },
   onLoad: function(options) {
     let obj = wx.getMenuButtonBoundingClientRect();
+    var kind=parseInt(options.kind)
     this.setData({
       width: obj.left,
       height: obj.top + obj.height + 8,
       inputTop: obj.top + (obj.height - 30) / 2,
       arrowTop: obj.top + (obj.height - 32) / 2,
-      searchKey: options.searchKey || ""
+      searchKey: options.searchKey || "",
+      kind:kind
     }, () => {
       wx.getSystemInfo({
         success: (res) => {
@@ -286,6 +291,7 @@ Page({
         }
       })
     });
+    this.getData(kind)
   },
   onPullDownRefresh: function() {
     let loadData = JSON.parse(JSON.stringify(this.data.productList));
@@ -452,6 +458,24 @@ Page({
   detail: function() {
     wx.navigateTo({
       url: '../product/detail'
+    })
+  },
+
+  // 获取数据
+  getData:function(kind){
+    var that=this
+    const _ = db.command
+    db.collection('productList').where({
+      kind:kind
+    }).get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log('kind',res.data)
+        let data=res.data
+        that.setData({
+          productList:data,
+        })
+      }
     })
   }
 })

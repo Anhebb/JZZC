@@ -8,7 +8,7 @@
 
   <scroll-view scroll-y scroll-with-animation class="tab-view" scroll-top="{{scrollTop}}" style="height:{{menuHeight}}px">
     <view wx:for="{{tabbar}}" wx:key="{{index}}" class="tab-bar-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" catchtap="swichNav">
-      <text>{{item}}</text>
+      <text>{{item.tname}}</text>
     </view>
   </scroll-view>
   <view class="right-box">
@@ -28,13 +28,13 @@
         </swiper>
         <view class="class-box">
           <view class="class-item">
-            <view class="class-name">{{item}}</view>
+            <view class="class-name">{{item.tname}}</view>
             <view class="g-container">
-              <view class="g-box" catchtap="productList" data-key="高价回收">
-                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
-                <view class="g-title">高价回收</view>
+              <view class="g-box" wx:for="{{item.item}}" wx:for-item="item2" catchtap="productList" data-kind="{{item2.kind}}" data-key="{{item2.iname}}">
+                <image src="{{item2.image}}" class="g-image" />
+                <view class="g-title">{{item2.iname}}</view>
               </view>
-              <view class="g-box" catchtap="productList" data-key="好物优选">
+              <!-- <view class="g-box" catchtap="productList" data-key="好物优选">
                 <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">好物优选</view>
               </view>
@@ -45,18 +45,18 @@
               <view class="g-box" catchtap="productList" data-key="电动牙刷" wx:if="{{index%2===0}}">
                 <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">电动牙刷</view>
-              </view>
+              </view> -->
             </view>
           </view>
 
           <view class="class-item">
-            <view class="class-name">专场推荐{{index+1}}</view>
+            <view class="class-name">嘉庚推荐</view>
             <view class="g-container">
-              <view class="g-box" catchtap="productList" data-key="笔记本" wx:if="{{index%2===0}}">
-                <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
-                <view class="g-title">笔记本</view>
+              <view class="g-box" wx:for="{{recommend}}" wx:for-item="item" catchtap="productList" data-kind="{{item.kind}}" data-key="{{item.iname}}" wx:if="{{index%2===0}}">
+                <image src="{{item.image}}" class="g-image" />
+                <view class="g-title">{{item.iname}}</view>
               </view>
-              <view class="g-box" catchtap="productList" data-key="电水壶">
+              <!-- <view class="g-box" catchtap="productList" data-key="电水壶">
                 <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="g-image" />
                 <view class="g-title">电水壶</view>
               </view>
@@ -83,11 +83,11 @@
               <view class="g-box" catchtap="productList" data-key="iphone X" wx:if="{{index%2===0}}">
                 <image src="../../static/images/product/33.jpg" class="g-image" />
                 <view class="g-title">iphone X</view>
-              </view>
+              </view> -->
             </view>
           </view>
 
-          <view class="class-item">
+          <!-- <view class="class-item">
             <view class="class-name">专场推荐{{index+1}}</view>
             <view class="g-container">
               <view class="g-box" catchtap="productList" data-key="iphone X">
@@ -115,7 +115,7 @@
                 <view class="g-title">iphone X</view>
               </view>
             </view>
-          </view>
+          </view> -->
 
         </view>
       </view>

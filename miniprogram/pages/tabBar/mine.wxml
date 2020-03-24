@@ -11,10 +11,10 @@
 		<view class="tui-header-center">
 			<!-- 登录显示 -->
 			<view class="hadLogin" wx:if="{{login}}">
-				<image src="{{userInfo.avatarUrl}}" class="tui-avatar" bindtap="href" data-type="3"></image>
+				<image src="{{userInfo.userInfo.avatarUrl}}" class="tui-avatar" bindtap="href" data-type="3"></image>
 				<view class="tui-info">
 					<view class="tui-nickname">
-						<text>{{userInfo.nickName}}</text>
+						<text>{{userInfo.userInfo.nickName}}</text>
 					</view>
 					<view class="tui-explain">这家伙很懒…</view>
 				</view>

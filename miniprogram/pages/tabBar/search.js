@@ -1,6 +1,9 @@
+const app = getApp()
+const db = wx.cloud.database()
 Page({
   data: {
-    tabbar: ["推荐分类", "进口超市", "国际名牌", "奢侈品", "海囤全球", "男装", "女装", "男鞋", "女鞋", "钟表珠宝", "手机数码", "电脑办公", "家用电器", "玩具乐器", "运动户外", "宠物生活", "特产馆"],
+    tabbar: ["推荐分类", "肉类", "蔬菜", "海鲜", "蛋类", "饮料", "其他"],
+    recommend:[],
     menuHeight: "", //菜单高度
     currentTab: 0, //预设当前项的值
     scrollTop: 0 //tab标题的滚动条位置
@@ -13,7 +16,7 @@ Page({
         });
       }
     });
-
+    this.getData()
   },
   // 点击标题切换当前页时改变样式
   swichNav: function (e) {
@@ -53,13 +56,31 @@ Page({
   },
   productList(e) {
     let key = e.currentTarget.dataset.key;
+    let kind = e.currentTarget.dataset.kind;
     wx.navigateTo({
-      url: '../search/productList/index?searchKey=' + key
+      url: '../search/productList/index?searchKey=' + key+'&kind='+kind
     })
   },
   search: function () {
     wx.navigateTo({
       url: '../extend-view/news-search/news-search'
     })
+  },
+
+   // 获取数据 
+   getData:function(){
+    var that=this
+    const _ = db.command
+    db.collection('search').doc('index').get({
+      success: function(res) {
+        // res.data 包含该记录的数据
+        console.log("搜索页",res.data)
+        let data=res.data
+        that.setData({
+          tabbar:data.tabbar,
+          recommend:data.recommend
+        })
+      }
+    });
   }
 })

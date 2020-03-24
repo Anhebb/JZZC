@@ -73,6 +73,13 @@
 					"id": -1,
 					"name": "pages/mine/addData/index",
 					"pathName": "pages/mine/addData/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tabBar/search",
+					"pathName": "pages/tabBar/search",
 					"scene": null
 				}
 			]

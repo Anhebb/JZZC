@@ -236,15 +236,15 @@
   <template name="productItem">
     <!--商品列表-->
     <view class="tui-pro-item {{isList?'tui-flex-list':''}}" hover-class="hover" hover-start-time="150" bindtap="detail">
-      <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/bg.gif" class="tui-pro-img {{isList?'tui-proimg-list':''}}" mode="widthFix" />
+      <image src="{{item.headimg}}" class="tui-pro-img {{isList?'tui-proimg-list':''}}" mode="widthFix" />
       <view class="tui-pro-content">
         <view class="tui-pro-tit">{{item.name}}</view>
         <view>
           <view class="tui-pro-price">
-            <text class="tui-sale-price">￥{{item.sale}}</text>
-            <text class="tui-factory-price">￥{{item.factory}}</text>
+            <text class="tui-sale-price">￥{{item.price}}</text>
+            <!-- <text class="tui-factory-price">￥{{item.factory}}</text> -->
           </view>
-          <view class="tui-pro-pay">{{item.payNum}}人付款</view>
+          <view class="tui-pro-pay">{{item.sales_volume}}人付款</view>
         </view>
       </view>
     </view>
