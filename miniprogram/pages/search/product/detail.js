@@ -6,8 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    pid:1,
     popupShow: false,
     number:1,
+    product:'',
     address:'',
     def:''//默认地址
   },
@@ -18,6 +20,7 @@ Page({
   onLoad: function (options) {
     console.log(options.pid)
     var pid=parseInt(options.pid)
+    this.data.pid=pid;
     this.getData(pid)
     this.getAddress()
   },
@@ -87,6 +90,46 @@ Page({
     })
   },
 
+  // 加入购物车
+  addShoppingCar:function(){
+    let product =this.data.product;
+    product.number=this.data.number
+    var that = this
+    var id=wx.getStorageSync('id')
+
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'update',
+      // 传给云函数的参数
+      data: {
+        id:id,
+        todo:'shoppingCar',
+        product:product
+      },
+      success: function (res) {
+        console.log("我需要的",res)
+        db.collection('userInfo').doc(id).get({
+          success: function(res) {
+            // res.data 包含该记录的数据
+            console.log("1111",res.data)
+          }
+        })
+      },
+      fail: console.error
+    })
+    if(this.data.popupShow==true){
+      this.setData({
+        popupShow:false
+      })
+    }
+  },
+  submit:function(){
+    console.log("132465465");
+    wx.navigateTo({
+      url: '../../shoppingCar/submitOrder/index?kind=1&pid='+this.data.pid+'&number='+this.data.number,
+    })
+  },
+
    // 获取数据 
    getData:function(pid){
     var that=this
@@ -121,6 +164,8 @@ Page({
          def= element
          
         });
+        wx.setStorageSync('address', data.address)
+        wx.setStorageSync('def', def)
         that.setData({
           address:data.address,
           def

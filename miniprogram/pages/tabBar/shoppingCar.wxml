@@ -1,13 +1,13 @@
 <view class="container">
   <view class="tui-edit-goods">
     <view>购物车共
-      <text class="tui-goods-num">2</text>件商品</view>
+      <text class="tui-goods-num">{{shoppingCar.length}}</text>件商品</view>
     <view>
       <tui-button type="gray" plain="{{true}}" shape="circle" width="160rpx" height="60rpx" size="{{24}}" bind:click="editGoods">{{isEdit?"完成":"编辑商品"}}</tui-button>
     </view>
   </view>
   <checkbox-group>
-    <view class="tui-cart-cell  tui-mtop" wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class="tui-cart-cell  tui-mtop" wx:for="{{shoppingCar}}" wx:key="{{index}}">
       <view class="tui-activity" wx:if="{{index%2==0}}">
         <view class="tui-bold">满3件享受优惠</view>
         <view class="tui-buy">去凑单
@@ -17,25 +17,28 @@
       <tui-swipe-action actions="{{actions}}" bind:change="handlerButton" params="{{item}}">
         <view class="tui-goods-item" slot="content">
           <label class="tui-checkbox">
-            <checkbox color="#fff"></checkbox>
+          <checkbox-group  bindchange="total" >
+          <checkbox color="#fff" value="{{item.pid}}"></checkbox>
+          </checkbox-group>
+            
           </label>
-          <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="tui-goods-img" />
+          <image src="{{item.headimg}}" class="tui-goods-img" />
           <view class="tui-goods-info">
             <view class="tui-goods-title">
-              {{index%2==0?"欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜":"百雀羚套装女补水保湿护肤品"}}
+              {{item.name}}
             </view>
             <view class="tui-goods-model">
               <view class="tui-model-text">{{index%2==0?"440ml;10件;套装":"500ml;2支"}}</view>
               <tui-icon name="arrowdown" size="{{16}}" color="#333"></tui-icon>
             </view>
             <view class="tui-price-box">
-              <view class="tui-goods-price">￥500</view>
-              <tui-numberbox value="{{item.buyNum}}" height="28" width="56" min="1"  iconsize="22" iconcolor="#666" index="{{index}}" bind:change="changeNum"></tui-numberbox>
+              <view class="tui-goods-price">￥{{item.price}}</view>
+              <tui-numberbox value="{{item.number}}" height="28" width="56" min="1"  iconsize="22" iconcolor="#666" index="{{index}}" bind:change="changeNum"></tui-numberbox>
             </view>
           </view>
         </view>
       </tui-swipe-action>
-      <view class="tui-sub-info" wx:if="{{index%2==0}}">赠品：柔色尽情丝柔口红唇膏1支柔色尽情丝柔口红唇膏1支</view>
+      <!-- <view class="tui-sub-info" wx:if="{{index%2==0}}">赠品：柔色尽情丝柔口红唇膏1支柔色尽情丝柔口红唇膏1支</view> -->
     </view>
   </checkbox-group>
 
@@ -47,16 +50,16 @@
         <tui-button type="gray" plain="{{true}}" shape="circle" width="200rpx" height="56rpx" size="{{24}}">清空失效商品</tui-button>
       </view>
     </view>
-    <view class="{{index!==0?'tui-invalid-ptop':''}}" wx:for="{{2}}" wx:key="{{index}}">
+    <view class="{{index!==0?'tui-invalid-ptop':''}}" wx:for="{{shoppingCar}}" wx:key="{{index}}">
       <tui-swipe-action actions="{{actions2}}">
         <view class="tui-goods-item" slot="content">
           <view class="tui-checkbox tui-invalid-pr">
             <view class="tui-invalid-text">失效</view>
           </view>
-          <image src="cloud://jzzc-rp01x.6a7a-jzzc-rp01x-1300766828/images/55.jpg" class="tui-goods-img opcity" />
+          <image src="{{item.headimg}}" class="tui-goods-img opcity" />
           <view class="tui-goods-info">
             <view class="tui-goods-title tui-gray">
-              欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜
+             {{item.name}}
             </view>
             <view class="tui-price-box tui-flex-center">
               <view class="tui-goods-invalid">产品失效</view>

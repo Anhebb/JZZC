@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "tui-tabs": "../../../components/thorUI/tui-tabs/tui-tabs",
+    "tui-button": "../../../components/thorUI/extend/button/button",
+    "tui-loadmore": "../../../components/thorUI/loadmore/loadmore",
+    "tui-nomore": "../../../components/thorUI/nomore/nomore",
+    "tui-list-cell": "../../../components/thorUI/list-cell/list-cell",
+    "tui-sticky": "../../../components/thorUI/sticky/sticky"
+  }
+}

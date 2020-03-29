@@ -4,11 +4,11 @@
       <view class="tui-address">
         <view wx:if="{{true}}">
           <view class="tui-userinfo">
-            <text class="tui-name">王大大</text> 139****7708
+            <text class="tui-name">{{def.name}}</text> {{def.phone}}
           </view>
           <view class="tui-addr">
-            <view class="tui-addr-tag">公司</view>
-            <text>广东省深圳市南山区高新科技园中区一路</text>
+            <view class="tui-addr-tag">默认</view>
+            <text>{{def.address}}</text>
           </view>
         </view>
         <view class="tui-none-addr" wx:else>
@@ -24,17 +24,17 @@
           商品信息
         </view>
       </tui-list-cell>
-      <block wx:for="{{2}}" wx:key="{{index}}">
+      <block >
         <tui-list-cell hover="{{false}}" padding="0">
           <view class="tui-goods-item">
-            <image src="/static/images/mall/product/{{index+3}}.jpg" class="tui-goods-img"></image>
+            <image src="{{product.headimg}}" class="tui-goods-img"></image>
             <view class="tui-goods-center">
-              <view class="tui-goods-name">欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）</view>
+              <view class="tui-goods-name">{{product.name}}</view>
               <view class="tui-goods-attr">黑色，50ml</view>
             </view>
             <view class="tui-price-right">
-              <view>￥298.00</view>
-              <view>x2</view>
+              <view>￥{{product.price}}</view>
+              <view>x{{number}}</view>
             </view>
           </view>
         </tui-list-cell>
@@ -42,7 +42,7 @@
       <tui-list-cell hover="{{false}}">
         <view class="tui-padding tui-flex">
           <view>商品总额</view>
-          <view>￥1192.00</view>
+          <view>￥{{product.price*number}}</view>
         </view>
       </tui-list-cell>
       <tui-list-cell arrow="{{hasCoupon}}" hover="{{hasCoupon}}">
@@ -54,7 +54,7 @@
       <tui-list-cell hover="{{true}}" arrow="{{true}}">
         <view class="tui-padding tui-flex">
           <view>发票</view>
-          <view class="tui-invoice-text">不开发票</view>
+          <view class="tui-invoice-text">开发票</view>
         </view>
       </tui-list-cell>
       <tui-list-cell hover="{{false}}">
@@ -74,7 +74,7 @@
           <view class="tui-flex-end tui-color-red">
             <view class="tui-black">合计： </view>
             <view class="tui-size-26">￥</view>
-            <view class="tui-price-large">1192</view>
+            <view class="tui-price-large">{{product.price*number}}</view>
             <view class="tui-size-26">.00</view>
           </view>
         </view>
@@ -98,7 +98,7 @@
     <view class="tui-flex-end tui-color-red tui-pr-20">
       <view class="tui-black">实付金额: </view>
       <view class="tui-size-26">￥</view>
-      <view class="tui-price-large">1192</view>
+      <view class="tui-price-large">{{product.price*number}}</view>
       <view class="tui-size-26">.00</view>
     </view>
     <view class="tui-pr25">

@@ -61,28 +61,28 @@
 				</view>
 			</tui-list-cell>
 			<view class="tui-order-list">
-				<view class="tui-order-item" bindtap="href" data-type="4">
+				<view class="tui-order-item" bindtap="href" data-type="4" data-currentTab="0">
 					<view class="tui-icon-box">
 						<image src="/images/mine/icon_daifukuan_3x.png" class="tui-order-icon"></image>
-						<view class="tui-badge tui-badge-red">1</view>
+						<view class="tui-badge tui-badge-red">{{waitPay.length}}</view>
 					</view>
 					<view class="tui-order-text">待付款</view>
 				</view>
-				<view class="tui-order-item" bindtap="href" data-type="4">
+				<view class="tui-order-item" bindtap="href" data-type="4" data-currentTab="1">
 					<view class="tui-icon-box">
 						<image src="/images/mine/icon_daifahuo_3x.png" class="tui-order-icon"></image>
-						<view class="tui-badge tui-badge-red">1</view>
+						<view class="tui-badge tui-badge-red">{{delivery.length}}</view>
 					</view>
 					<view class="tui-order-text">待发货</view>
 				</view>
-				<view class="tui-order-item" bindtap="href" data-type="4">
+				<view class="tui-order-item" bindtap="href" data-type="4" data-currentTab="2">
 					<view class="tui-icon-box">
 						<image src="/images/mine/icon_daishouhuo_3x.png" class="tui-order-icon"></image>
-						<view class="tui-badge tui-badge-red" v-if="false">12</view>
+						<view class="tui-badge tui-badge-red" v-if="false">{{finish.length}}</view>
 					</view>
 					<view class="tui-order-text">待收货</view>
 				</view>
-				<view class="tui-order-item" bindtap="href" data-type="4">
+				<!-- <view class="tui-order-item" bindtap="href" data-type="4">
 					<view class="tui-icon-box">
 						<image src="/images/mine/icon_pingjia_3x.png" class="tui-order-icon"></image>
 						<view class="tui-badge tui-badge-red" v-if="false">12</view>
@@ -95,7 +95,7 @@
 						<view class="tui-badge tui-badge-red">2</view>
 					</view>
 					<view class="tui-order-text">退款/售后</view>
-				</view>
+				</view> -->
 			</view>
 		</view>
 

@@ -223,10 +223,10 @@ font-weight: 500;
 }
 
 .tui-number {
-  font-size: 24rpx;
-  line-height: 24rpx;
+  width: 450rpx;
+  font-size: 36rpx;
   padding-top: 12rpx;
-  color: #999;
+
 }
 
 .tui-popup-scroll {

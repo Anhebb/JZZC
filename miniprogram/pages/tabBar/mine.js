@@ -82,7 +82,10 @@ Page({
     loadding: false,
     pullUpOn: true,
     login:false,
-    userInfo:''
+    userInfo:'',
+    waitPay:[],
+    delivery:[],
+    finish:[]
   },
   onLoad: function (options) {
     let obj = wx.getMenuButtonBoundingClientRect();
@@ -96,6 +99,7 @@ Page({
         })
       }
     })
+    this.getData()
   },
   onShow:function(){
     var userInfo=wx.getStorageSync('userInfo')
@@ -107,7 +111,9 @@ Page({
     }
   },
   href(e) {
+    console.log(e);
     let page = Number(e.currentTarget.dataset.type)
+    let currentTab =e.currentTarget.dataset.currenttab
     let url = "";
     switch (page) {
       case 1:
@@ -119,7 +125,7 @@ Page({
         url = "../mine/userInfo/index"
         break;
       case 4:
-        url = "../myOrder/myOrder"
+        url = "../mine/order/index?currentTab="+currentTab
         break;
       default:
         break;
@@ -183,13 +189,16 @@ Page({
   // 获取数据 
   getData:function(){
     var that=this
-    db.collection('userInfo').get({
+    var id=wx.getStorageSync('id')
+    db.collection('userInfo').doc(id).get({
       success: function(res) {
         // res.data 包含该记录的数据
-        console.log(res.data)
-        let data=res.data[0]
+        console.log("购物车",res.data)
+        let data=res.data
         that.setData({
-          userInfo:data.userInfo,
+          waitPay:data.shoppingCar,
+          delivery:data.delivery,
+          finish:data.finish
         })
       }
     })

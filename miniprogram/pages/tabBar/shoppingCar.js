@@ -1,3 +1,5 @@
+const db = wx.cloud.database()
+const app = getApp()
 Page({
   data: {
     dataList: [{
@@ -118,10 +120,11 @@ Page({
     ],
     pageIndex: 1,
     loadding: false,
-    pullUpOn: true
+    pullUpOn: true,
+    shoppingCar:[]
   },
   onLoad: function (options) {
-
+    this.getData()
   },
   changeNum: function (e) {
     console.log(e)
@@ -193,5 +196,25 @@ Page({
         productList: this.data.productList.concat(loadData)
       })
     }
-  }
+  },
+
+  // 合计金钱
+  total:function(e){
+    console.log(e)
+  },
+ // 获取数据 
+ getData:function(){
+  var that=this
+  var id=wx.getStorageSync('id')
+  db.collection('userInfo').doc(id).get({
+    success: function(res) {
+      // res.data 包含该记录的数据
+      console.log("购物车",res.data)
+      let data=res.data
+      that.setData({
+        shoppingCar:data.shoppingCar
+      })
+    }
+  })
+}
 })

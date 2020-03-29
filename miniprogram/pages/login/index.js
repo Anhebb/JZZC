@@ -100,7 +100,10 @@ Page({
             address:[],
             phone:'',
             sex:'',
-            name:''
+            name:'',
+            shoppingCar:[],
+            delivery:[],
+            finish:[]
           }
         }).then(res => {
           console.log("我需要的信息",res);

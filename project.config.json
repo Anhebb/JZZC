@@ -80,6 +80,21 @@
 					"id": -1,
 					"name": "pages/tabBar/search",
 					"pathName": "pages/tabBar/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/order/index",
+					"pathName": "pages/mine/order/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/search/product/detail",
+					"pathName": "pages/search/product/detail",
+					"query": "pid=1",
 					"scene": null
 				}
 			]

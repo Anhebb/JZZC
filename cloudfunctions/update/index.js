@@ -44,6 +44,39 @@ exports.main = async (event, context) => {
           console.error(e)
         }
       break;
+      case 'shoppingCar' :
+        console.log("调用了云函数",event)
+        try {
+          return await db.collection('userInfo').doc(event.id).update({
+            // data 传入需要局部更新的数据
+            data: {
+              shoppingCar:_.push(event.product),
+            }
+          });
+        } catch (e) {
+          console.error(e)
+        }
+      break;
+      case 'submitOrder' :
+        console.log("调用了submitOrder云函数",event)
+        try {
+           await db.collection('productList').doc(event.pid).update({
+            // data 传入需要局部更新的数据
+            data: {
+              stock:_.inc(-event.number),
+              sales_volume:_.inc(event.number)
+            }
+          })
+           await db.collection('userInfo').doc(event.id).update({
+            // data 传入需要局部更新的数据
+            data: {
+              delivery:_.push(event.product)
+            }
+          })
+        } catch (e) {
+          console.error(e)
+        }
+      break;
   }
   
 }

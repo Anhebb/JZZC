@@ -15,7 +15,8 @@
     "pages/mine/address/editAdress/index",
     "pages/mine/userInfo/index",
     "pages/search/productList/index",
-    "pages/mine/addData/index"
+    "pages/mine/addData/index",
+    "pages/mine/order/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
