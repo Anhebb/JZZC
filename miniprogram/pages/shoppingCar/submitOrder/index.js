@@ -7,7 +7,8 @@ Page({
     product:'',
     def:'',
     number:'',
-    total:0
+    total:0,
+    time:1700
   },
   onLoad: function (options) {
     console.log(options)
@@ -29,6 +30,7 @@ Page({
   },
   btnPay() {
     this.paySucceed()
+    this.sendDistribution()
     wx.navigateTo({
       url: "../paySuccess/index"
     })
@@ -83,4 +85,19 @@ Page({
       fail: console.error
     })
   },
+  //将订单信息推进数据库
+  sendDistribution:function(){
+    var address=this.data.def;
+    var product=this.data.product
+    var number=this.data.number
+    var time=this.data.time
+    db.collection('order').add({
+      data: {
+        address,
+        product,
+        number,
+        time,
+      }
+    })
+  }
 })

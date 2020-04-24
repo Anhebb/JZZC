@@ -43,6 +43,7 @@
 			<view class="tui-selected-box">您已选择了 {{number}} 份</view>
 			<c-icon name="more-fill" size="20" class="tui-right" color="#666"></c-icon>
 		</view>
+		
 		<view class="tui-list-cell" bindtap="showPopup">
 			<view class="tui-bold tui-cell-title">送至</view>
 			<view class="tui-addr-box">

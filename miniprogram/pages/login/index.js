@@ -103,7 +103,8 @@ Page({
             name:'',
             shoppingCar:[],
             delivery:[],
-            finish:[]
+            finish:[],
+            administrator:false
           }
         }).then(res => {
           console.log("我需要的信息",res);

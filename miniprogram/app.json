@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/tabBar/search",
     "pages/tabBar/mine",
     "pages/register/index",
     "pages/login/index",
@@ -7,7 +8,7 @@
     "pages/shoppingCar/submitOrder/index",
     "pages/search/product/detail",
     "pages/tabBar/shoppingCar",
-    "pages/tabBar/search",
+    
     "pages/search/search/index",
     "pages/index/lucky/index",
     "pages/shoppingCar/paySuccess/index",
@@ -16,7 +17,8 @@
     "pages/mine/userInfo/index",
     "pages/search/productList/index",
     "pages/mine/addData/index",
-    "pages/mine/order/index"
+    "pages/mine/order/index",
+    "pages/mine/distribution/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

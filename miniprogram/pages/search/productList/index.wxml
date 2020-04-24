@@ -42,19 +42,19 @@
       <!--下拉选择列表--综合-->
 
     </view>
-    <view class="tui-screen-bottom">
+    <!-- <view class="tui-screen-bottom">
       <block wx:for="{{attrArr}}" wx:key="{{index}}">
         <view class="tui-bottom-item {{item.isActive?'tui-btmItem-active':''}} {{attrIndex==index?'tui-btmItem-tap':''}}" data-index="{{index}}" bindtap="btnDropChange">
           <view class="tui-bottom-text {{attrIndex==index?'tui-active':''}}">{{item.isActive?item.selectedName:item.name}}</view>
           <tui-icon name="{{attrIndex==index?'arrowup':'arrowdown'}}" size="14" color="{{attrIndex==index || item.isActive?'#e41f19':'#444'}}" tui-icon-class="tui-ml" wx:if="{{item.list.length>0}}"></tui-icon>
         </view>
       </block>
-    </view>
+    </view> -->
   </view>
   <!--screen-->
 
   <!--list-->
-  <view class="tui-product-list" style="margin-top:{{dropScreenH+18}}rpx">
+  <view class="tui-product-list" style="margin-top:{{dropScreenH-78}}rpx">
     <view class="tui-product-container">
       <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0 || isList}}">
         <template is="productItem" data="{{item,index:index,isList:isList}}" />

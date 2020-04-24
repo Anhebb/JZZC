@@ -21,7 +21,7 @@
       <tui-icon tui-icon-class="tui-rolling-icon" name-="news-fill" size='24' color='#f54f46'></tui-icon>
     </view>
     <view class="tui-scorll-view" bindtap='detail'>
-      <view class="tui-notice {{animation?'tui-animation':''}}">近在咫尺的市场，近在咫尺的新鲜，让你的生活如此多姿！</view>
+      <view class="tui-notice {{animation?'tui-animation':''}}">每日菜价：猪肉31元/500g;牛肉60元/500g;菜心3元/500g;罗非鱼7元/500g.</view>
     </view>
   </view>
 	<!--banner-->

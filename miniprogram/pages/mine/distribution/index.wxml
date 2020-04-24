@@ -1,0 +1,28 @@
+<view class="container">
+	<block wx:for="{{list}}" wx:key="{{index}}">
+  <view>订单号：{{item._id}}</view>
+		<tui-list-cell padding="0" bindclick="detail">
+			<view class="tui-goods-item">
+				<image src="{{item.product.headimg}}" class="tui-goods-img"></image>
+				<view class="tui-goods-center">
+					<view class="tui-goods-name">{{item.product.name}}</view>
+				</view>
+				<!-- <view class="tui-price-right">
+					<view>x{{item.number}}</view>
+				</view> -->
+			</view>
+      			<view class="tui-goods-price info">
+				<view>收货人姓名：{{item.address.name}}</view>
+        <view>收货人电话：{{item.address.phone}}</view>
+				<view>地址：{{item.address.address}}</view>
+				<view>共{{item.number}}件商品</view>
+			</view>
+		</tui-list-cell>
+    <view>
+    <button bindtap="hadover" data-index="{{index}}">已送达</button>
+    </view>
+		<tui-list-cell hover="{{false}}" last="{{true}}">
+
+		</tui-list-cell>
+	</block>
+</view>

@@ -85,7 +85,8 @@ Page({
     userInfo:'',
     waitPay:[],
     delivery:[],
-    finish:[]
+    finish:[],
+    administrator:false
   },
   onLoad: function (options) {
     let obj = wx.getMenuButtonBoundingClientRect();
@@ -198,7 +199,8 @@ Page({
         that.setData({
           waitPay:data.shoppingCar,
           delivery:data.delivery,
-          finish:data.finish
+          finish:data.finish,
+          administrator:data.administrator
         })
       }
     })
